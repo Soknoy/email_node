@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
         to: to,
         subject: subject,
         text: text,
-        html: `<b>Hey there!</b><br> This is our first message sent with Nodemailer ${req.body.to}<br/>`,
+        html: `<b>Hey there!</b><br> This is our first message sent with Nodemailer to ${req.body.to}<br/>`,
     };
 
     transporter.sendMail(mailData, (error, info) => {
